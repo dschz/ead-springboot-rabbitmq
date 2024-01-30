@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
+    <wildcardResourcePatterns>
+      <entry name="**/*.png" />
+      <entry name="**/*.gif" />
+      <entry name="**/*.xml" />
+      <entry name="**/*.html" />
+      <entry name="**/*.css" />
+      <entry name="**/*.properties" />
+      <entry name="**/ressources/*.png" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="stock-rabbitmq-srv" />
+        <module name="order-rabbitmq-srv" />
+        <module name="email-rabbitmq-srv" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="email-rabbitmq-srv" options="-parameters" />
+      <module name="order-rabbitmq-srv" options="-parameters" />
+      <module name="stock-rabbitmq-srv" options="-parameters" />
+    </option>
+  </component>
+</project>
